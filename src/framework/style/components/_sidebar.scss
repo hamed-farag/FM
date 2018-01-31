@@ -1,0 +1,120 @@
+.hub- {
+    &sidebar {
+        position: fixed;
+        width: 14rem;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        padding: 1.25rem;
+        overflow: auto;
+        color: #e4e4e4;
+        background: #1f323a;
+        border: none;
+        font-size: 0.75rem;
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+            border: 0px none #ffffff;
+            border-radius: 0;
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #49585f;
+            border: 0px none #ffffff;
+            border-radius: 0px;
+            &:hover {
+                background: #6b7d82;
+            }
+        }
+        &::-webkit-scrollbar-button {
+            width: 0px;
+            height: 0px;
+        }
+        &::-webkit-scrollbar-corner {
+            background: transparent;
+        }
+        &__section {
+            margin-top: 0px;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgb(46, 70, 78);
+            &__user_info {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 1em;
+                margin-bottom: 0;
+                &::before {
+                    display: table;
+                    content: ' ';
+                }
+                &__image_container {
+                    width: 2.25rem;
+                    & img {
+                        margin-right: 0.5rem;
+                        border-color: rgb(46, 70, 78);
+                        border-radius: 50%;
+                        border-width: 1px;
+                        border-style: solid;
+                        border-color: rgb(221, 221, 221);
+                        border-image: initial;
+                        width: 100%;
+                        display: inline-block;
+                        float: left;
+                    }
+                }
+                &__profile {
+                    padding-top: 0.2875rem;
+                }
+            }
+            & h4 {
+                font-size: 0.875rem;
+                line-height: 1;
+                color: rgb(161, 161, 161);
+                padding: 0px;
+                font-weight: 700;
+            }
+            &__nav {
+                margin-left: -1.25rem;
+                margin-right: -1.25rem;
+                &__list {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    &__item {
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        padding: 0.625rem 1.25rem;
+                        & a {
+                            color: rgb(228, 228, 228);
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                        & i.unseen {
+                            width: 0.3125rem;
+                            height: 0.3125rem;
+                            background-color: rgb(33, 153, 202);
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            left: 0.5rem;
+                            border-radius: 50%;
+                        }
+                        & i.icon {
+                            width: 1rem;
+                        }
+                        &--active {
+                            & a {
+                                color: #31a9da;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

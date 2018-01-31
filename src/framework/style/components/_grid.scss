@@ -1,0 +1,188 @@
+$colSize: ( sm, md, lg, xlg);
+.hub- {
+    &content {
+        padding: 1.25rem 0 0 7.5rem;
+    }
+    &container {
+        max-width: 75rem;
+        margin: 0 auto;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+    &column {
+        box-sizing: border-box;
+    }
+    &row {
+        margin: 0 -10px;
+        box-sizing: border-box;
+        &::after {
+            @include content-display;
+            clear: both;
+        }
+        &::before {
+            @include content-display;
+        }
+    }
+    &clear-fix {
+        &::after {
+            @include content-display;
+            clear: both;
+        }
+        &::before {
+            @include content-display;
+        }
+    }
+    &no-margin {
+        margin: 0 !important;
+    }
+    &column {
+        float: left;
+        padding: 0 10px;
+        min-height: 1px;
+        @for $i from 1 through length($colSize) {
+            &.hub-center-#{nth($colSize, $i)} {
+                float: none;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    &width {
+        &-sm- {
+            @include col;
+        }
+    }
+    &section {
+        margin-top: 20px;
+        &-title {
+            margin: 0 0 15px;
+            color: $hub-title-font-color;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 1.1;
+        }
+        &-small {
+            margin-top: 10px;
+        }
+    }
+    ///*VISIBILITY CLASSES*///
+    &hidden {
+        display: none !important;
+    }
+}
+
+@media #{$breakpoint-medium} {
+    .hub-width {
+        &-md- {
+            @include col;
+        }
+    }
+}
+
+@media #{$breakpoint-large} {
+    .hub-width {
+        &-lg- {
+            @include col;
+        }
+    }
+}
+
+@media #{$breakpoint-xlarge} {
+    .hub-width {
+        &-xlg- {
+            @include col;
+        }
+    }
+}
+
+
+/*MEDIUM AND UP (640px and up)*/
+
+@media #{$breakpoint-medium-up} {
+    .hub- {
+        &hidden-medium,
+        &visible-small-only {
+            display: none !important;
+        }
+    }
+}
+
+
+/*LARGE AND UP (960px and up)*/
+
+@media #{$breakpoint-large-up} {
+    .hub- {
+        &hidden-large,
+        &visible-medium-only {
+            display: none !important;
+        }
+    }
+}
+
+
+/*XLARGE AND UP (1200px and up)*/
+
+@media #{$breakpoint-xlarge-up} {
+    .hub- {
+        &hidden-xlarge,
+        &hidden-xlarge-only,
+        &visible-large-only {
+            display: none !important;
+        }
+    }
+}
+
+
+/*SMALL ONLY (0 to 639px)*/
+
+@media #{$breakpoint-small-only} {
+    .hub- {
+        &visible-medium,
+        &hidden-small-only,
+        &visible-medium-only {
+            display: none !important;
+        }
+    }
+}
+
+
+/*MEDIUM AND DOWN (0 to 959px)*/
+
+@media #{$breakpoint-medium-down} {
+    .hub- {
+        &visible-large,
+        &visible-large-only {
+            display: none !important;
+        }
+    }
+}
+
+
+/*LARGE AND DOWN (0 to 1199px)*/
+
+@media #{$breakpoint-large-down} {
+    .hub- {
+        &visible-xlarge,
+        &visible-xlarge-only {
+            display: none !important;
+        }
+    }
+}
+
+
+/*MEDIUM ONLY (640px to 959px)*/
+
+@media #{$breakpoint-medium-only} {
+    .hub-hidden-medium-only {
+        display: none !important;
+    }
+}
+
+
+/*LARGE ONLY (960px to 1199px)*/
+
+@media #{$breakpoint-large-only} {
+    .hub-hidden-large-only {
+        display: none !important;
+    }
+}

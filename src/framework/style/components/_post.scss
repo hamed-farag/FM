@@ -1,0 +1,35 @@
+.hub- {
+    &post {
+        position: relative;
+        margin-top: 1.25rem;
+        &-media {
+            border-color: #ddd;
+        }
+        &-info {
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            color: #999;
+            border-bottom: 1px solid #ddd;
+        }
+        &-header {}
+        &-body {
+            margin: 0.75rem 0;
+        }
+        &-actions {
+            margin: 0.75rem -0.75rem -0.75rem;
+            background-color: #fff;
+            &-count {
+                margin-top: 0.75rem;
+                padding-top: 0.375rem;
+                border-top: 1px solid #ddd;
+            }
+        }
+        &-footer {}
+    }
+    &comment {
+        border-color: #ddd;
+    }
+    &reply {
+        border-color: #ddd;
+    }
+}
