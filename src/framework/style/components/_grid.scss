@@ -1,19 +1,12 @@
 $colSize: ( sm, md, lg, xlg);
 .hub- {
-    &content {
-        padding: 1.25rem 0 0 7.5rem;
-    }
-    &container {
-        max-width: 75rem;
-        margin: 0 auto;
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
-    }
-    &column {
-        box-sizing: border-box;
+    &grid {
+        padding: 0 15px;
+        margin-top: 10px;
+        display: block;
     }
     &row {
-        margin: 0 -10px;
+        margin: 0 -15px;
         box-sizing: border-box;
         &::after {
             @include content-display;
@@ -36,9 +29,18 @@ $colSize: ( sm, md, lg, xlg);
         margin: 0 !important;
     }
     &column {
+        overflow: auto;
         float: left;
         padding: 0 10px;
+        margin-bottom: 5px;
         min-height: 1px;
+        box-sizing: border-box;
+        .hub-grid {
+            padding: 0;
+        }
+        .hub-row {
+            margin: 0;
+        }
         @for $i from 1 through length($colSize) {
             &.hub-center-#{nth($colSize, $i)} {
                 float: none;
@@ -50,6 +52,9 @@ $colSize: ( sm, md, lg, xlg);
     &width {
         &-sm- {
             @include col;
+        }
+        &-offset-sm- {
+            @include col-offset;
         }
     }
     &section {
@@ -65,7 +70,7 @@ $colSize: ( sm, md, lg, xlg);
             margin-top: 10px;
         }
     }
-    ///*VISIBILITY CLASSES*///
+    // /*VISIBILITY CLASSES*///
     &hidden {
         display: none !important;
     }
@@ -76,6 +81,9 @@ $colSize: ( sm, md, lg, xlg);
         &-md- {
             @include col;
         }
+        &-offset-md- {
+            @include col-offset;
+        }
     }
 }
 
@@ -83,6 +91,9 @@ $colSize: ( sm, md, lg, xlg);
     .hub-width {
         &-lg- {
             @include col;
+        }
+        &-offset-lg- {
+            @include col-offset;
         }
     }
 }
@@ -92,11 +103,14 @@ $colSize: ( sm, md, lg, xlg);
         &-xlg- {
             @include col;
         }
+        &-offset-xlg- {
+            @include col-offset;
+        }
     }
 }
 
 
-/*MEDIUM AND UP (640px and up)*/
+/* MEDIUM AND UP (640px and up) */
 
 @media #{$breakpoint-medium-up} {
     .hub- {
@@ -108,7 +122,7 @@ $colSize: ( sm, md, lg, xlg);
 }
 
 
-/*LARGE AND UP (960px and up)*/
+/* LARGE AND UP (960px and up) */
 
 @media #{$breakpoint-large-up} {
     .hub- {
@@ -120,7 +134,7 @@ $colSize: ( sm, md, lg, xlg);
 }
 
 
-/*XLARGE AND UP (1200px and up)*/
+/* XLARGE AND UP (1200px and up) */
 
 @media #{$breakpoint-xlarge-up} {
     .hub- {
@@ -133,7 +147,7 @@ $colSize: ( sm, md, lg, xlg);
 }
 
 
-/*SMALL ONLY (0 to 639px)*/
+/* SMALL ONLY (0 to 639px) */
 
 @media #{$breakpoint-small-only} {
     .hub- {
@@ -146,7 +160,7 @@ $colSize: ( sm, md, lg, xlg);
 }
 
 
-/*MEDIUM AND DOWN (0 to 959px)*/
+/* MEDIUM AND DOWN (0 to 959px) */
 
 @media #{$breakpoint-medium-down} {
     .hub- {
@@ -158,7 +172,7 @@ $colSize: ( sm, md, lg, xlg);
 }
 
 
-/*LARGE AND DOWN (0 to 1199px)*/
+/* LARGE AND DOWN (0 to 1199px) */
 
 @media #{$breakpoint-large-down} {
     .hub- {
@@ -170,7 +184,7 @@ $colSize: ( sm, md, lg, xlg);
 }
 
 
-/*MEDIUM ONLY (640px to 959px)*/
+/* MEDIUM ONLY (640px to 959px) */
 
 @media #{$breakpoint-medium-only} {
     .hub-hidden-medium-only {
@@ -179,7 +193,7 @@ $colSize: ( sm, md, lg, xlg);
 }
 
 
-/*LARGE ONLY (960px to 1199px)*/
+/* LARGE ONLY (960px to 1199px) */
 
 @media #{$breakpoint-large-only} {
     .hub-hidden-large-only {
