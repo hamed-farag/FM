@@ -1,9 +1,12 @@
 .hub- {
     &sidebar {
-        position: fixed;
-        width: 20%;
+        position: absolute;
+        left: -80%;
+        width: 80%;
+        &--open {
+            left: 0%;
+        }
         top: 0;
-        left: 0;
         bottom: 0;
         padding: 1.25rem;
         overflow: auto;
@@ -11,15 +14,11 @@
         background: #1f323a;
         border: none;
         font-size: 0.75rem;
-        @media #{$breakpoint-small-only} {
+        @media #{$breakpoint-xlarge-only} {
             & {
-                position: absolute;
-                left: -80%;
-                width: 80%;
-                &--open {
-                    left: 0%;
-                }
-                // &::before {
+                position: fixed;
+                left: 0;
+                width: 20%; // &::before {
                 //     content: "x";
                 //     color: black;
                 //     position: relative;
