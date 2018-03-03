@@ -11,8 +11,6 @@ class SideBar extends React.Component {
         }
     }
 
-
-
     render() {
         const openSideBarClass = this.props.showSideBar ? "hub-sidebar--open" : undefined;
 
@@ -28,6 +26,9 @@ class SideBar extends React.Component {
                         <div className="hub-sidebar__body__section">
                             <div className="hub-sidebar__body__section__nav">
                                 <ul className="hub-sidebar__body__section__nav__list" onClick={() => this.props.closeSideBar()}>
+                                    <li className="hub-sidebar__body__section__nav__list__item" >
+                                        <Link to="/"> Philosophy </Link>
+                                    </li>
                                     <li className="hub-sidebar__body__section__nav__list__item" >
                                         <Link to="/"> Introduction </Link>
                                     </li>
