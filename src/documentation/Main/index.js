@@ -9,7 +9,7 @@ import GridContainer from "../GridContainer";
 
 import SideBar from '../_components/SideBar';
 import Section from '../_components/Section';
-// import Component from '../Component';
+import content from '../_content'
 
 
 class Main extends React.Component {
@@ -51,7 +51,9 @@ class Main extends React.Component {
 										path="/"
 										render={() => {
 											return (
-											<Section title="Philosophy" body={`A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases. Nebulae are often star-forming regions In these regions the formations of gas, dust, and other materials "clump" together to form denser regions, which attract further matter, and eventually will become dense enough to form stars. Nebula framework contains UI and JS Components so you you can build with them  your design and focus on your business and to make your app look and feel the ITWORX HUB Product.`} />);
+												<Section title={content["philosophy"].title}
+													body={content["philosophy"].main}
+													subBody={content["philosophy"].sub} />);
 										}}
 									/>
 								</div>
