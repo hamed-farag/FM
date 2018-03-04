@@ -1,7 +1,7 @@
 {
-    "name": "task",
-    "version": "1.0.0",
-    "description": "",
+    "name": "Nebula-UI",
+    "version": "0.1.0",
+    "description": "The official front-end framework for building experiences that fit seamlessly into ITWORX HUB.",
     "main": "./public/bundle.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",

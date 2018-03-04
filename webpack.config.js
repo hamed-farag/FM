@@ -2,11 +2,14 @@ var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var StyleLintPlugin = require('stylelint-webpack-plugin');
 var nodeExternals = require('webpack-node-externals');
+var pkg = require('./package.json');
+const bundleName = `nebula-ui-${pkg.version}`;
+
 module.exports = {
   entry: './src/documentation/index.js',
   output: {
     path: __dirname + '/public',
-    filename: 'bundle.js',
+    filename: `${bundleName}.js`,
   },
   // target: 'node',
   // externals: [nodeExternals()],
@@ -39,5 +42,5 @@ module.exports = {
   watchOptions: {
     poll: true,
   },
-  plugins: [new ExtractTextPlugin('bundle.css'), new StyleLintPlugin()],
+  plugins: [new ExtractTextPlugin(`${bundleName}.css`), new StyleLintPlugin()],
 };
