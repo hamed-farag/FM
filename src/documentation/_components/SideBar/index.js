@@ -26,17 +26,14 @@ class SideBar extends React.Component {
                         <div className="hub-sidebar__body__section">
                             <div className="hub-sidebar__body__section__nav">
                                 <ul className="hub-sidebar__body__section__nav__list" onClick={() => this.props.closeSideBar()}>
+                                <li className="hub-sidebar__body__section__nav__list__item" >
+                                        <Link to="/"> Introduction </Link>
+                                    </li>
                                     <li className="hub-sidebar__body__section__nav__list__item" >
                                         <Link to="/"> Philosophy </Link>
                                     </li>
-                                    <li className="hub-sidebar__body__section__nav__list__item" >
-                                        <Link to="/"> Introduction </Link>
-                                    </li>
                                     <li className="hub-sidebar__body__section__nav__list__item">
-                                        <Link to="/">
-                                            <i className="hub-sidebar__body__section__nav__list__item__icon" />
-                                            Getting Started
-                     					</Link>
+                                        <Link to="/"> Getting Started </Link>
                                     </li>
                                 </ul>
                             </div>
