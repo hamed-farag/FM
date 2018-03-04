@@ -1,6 +1,12 @@
-.ButtonContainer{
-    &__Button{
+.ButtonContainer {
+    &__Button {
         margin-right: 10px;
         display: inline-block;
+        &__Code {
+            margin-bottom: 10px;
+            &:last-child{
+                margin-bottom: 0px; 
+            }
+        }
     }
 }
