@@ -9,7 +9,7 @@ module.exports = {
   entry: './src/documentation/index.js',
   output: {
     path: __dirname + '/public',
-    filename: `${bundleName}.js`,
+    filename: `bundle.js`,
   },
   // target: 'node',
   // externals: [nodeExternals()],
@@ -42,5 +42,5 @@ module.exports = {
   watchOptions: {
     poll: true,
   },
-  plugins: [new ExtractTextPlugin(`${bundleName}.css`), new StyleLintPlugin()],
+  plugins: [new ExtractTextPlugin(`bundle.css`), new StyleLintPlugin()],
 };
