@@ -27,13 +27,13 @@ class SideBar extends React.Component {
                             <div className="hub-sidebar__body__section__nav">
                                 <ul className="hub-sidebar__body__section__nav__list" onClick={() => this.props.closeSideBar()}>
                                 <li className="hub-sidebar__body__section__nav__list__item" >
-                                        <Link to="/"> Introduction </Link>
+                                        <Link to="/introduction"> Introduction </Link>
                                     </li>
                                     <li className="hub-sidebar__body__section__nav__list__item" >
-                                        <Link to="/"> Philosophy </Link>
+                                        <Link to="/philosophy"> Philosophy </Link>
                                     </li>
                                     <li className="hub-sidebar__body__section__nav__list__item">
-                                        <Link to="/"> Getting Started </Link>
+                                        <Link to="/gettingstart"> Getting Started </Link>
                                     </li>
                                 </ul>
                             </div>
