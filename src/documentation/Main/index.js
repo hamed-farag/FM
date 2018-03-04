@@ -6,10 +6,11 @@ import styles from './main.scss';
 //Components
 import ButtonContainer from "../ButtonContainer";
 import GridContainer from "../GridContainer";
+import Introduction from "../Introduction";
+import Philosophy from "../Philosophy";
+import GetStarted from '../GetStarted';
 
 import SideBar from '../_components/SideBar';
-import Section from '../_components/Section';
-import content from '../_content'
 
 
 class Main extends React.Component {
@@ -46,22 +47,16 @@ class Main extends React.Component {
 								<div className="hub-column hub-width-sm-12">
 									<Route exact path="/button" component={ButtonContainer} />
 									<Route exact path="/grid" component={GridContainer} />
-									<Route
-										exact
-										path="/"
-										render={() => {
-											return (
-												<Section title={content["philosophy"].title}
-													body={content["philosophy"].main}
-													subBody={content["philosophy"].sub} />);
-										}}
-									/>
+									<Route exact path="/philosophy" component={Philosophy} />
+									<Route exact path="/Introduction" component={Introduction} />
+									<Route exact path="/gettingstart" component={GetStarted} />
+									<Route exact path="/" component={Introduction} />
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div >
+			</div>
 		);
 	}
 }
