@@ -24,7 +24,10 @@ export default function ({ }) {
 				<div className="ButtonContainer__Button"><Button buttonState="disabled" title="Disabled" /></div>
 			</Preview>
 			<Code title="Code">
-
+				<div>{`<button type="button" class="hub-button hub-button-primary"><span>Primary</span></button>`}</div>
+				<div>{`<button type="button" class="hub-button hub-button-secondary"><span>Secondary</span></button>`}</div>
+				<div>{`<button type="button" class="hub-button hub-button-primary hub-button-large"><span>Large</span></button>`}</div>
+				<div>{`<button type="button" class="hub-button hub-button-primary" disabled=""><span>Disabled</span></button>`}</div>
 			</Code>
 		</div>
 	)
